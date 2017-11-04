@@ -22,6 +22,19 @@ class ViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
     }
+    //添加一个按钮
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let btn = UIButton()
+        //raw 原始的，使用一个值调用枚举的构造函数，创建一个枚举值
+        btn.setTitle("come on", for: UIControlState(rawValue: 0))
+        btn.setTitleColor(#colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), for: UIControlState(rawValue: 0))
+        btn.sizeToFit()
+        btn.center=view.center
+        view.addSubview(btn)
+        
+        
+    }
 
 }
 ////UITableViewDataSource{
